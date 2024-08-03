@@ -231,13 +231,6 @@
     </li>   
     <li>
         <a href="#">
-            <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
-                <image height="32" width="32" href="./images/vector.svg" />
-            </svg>
-        </a>
-    </li>
-    <li>
-        <a href="#">
         <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg">
             <image height="32" width="32" href="./images/instagram.svg" />
         </svg>
@@ -286,6 +279,13 @@
 </div>
 
 
-<script src="./js/modal-button.js"></script>
+<script>
+const modal = document.querySelector('.backdrop');
+const modalBtnOpen = document.querySelector('.modal-btn-open');
+const modalBtnClose = document.querySelector('.modal-btn-close');
+const toggleModal = () => modal.classList.toggle('is-hidden');
+modalBtnOpen.addEventListener('click', toggleModal);
+modalBtnClose.addEventListener('click', toggleModal);
+</script>
 </body>
 </html>
